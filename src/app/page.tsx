@@ -1,8 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Login from "@/components/Login";
 
-export default function Home() {
+const App = () => {
   return (
-    <h1>Hello World!</h1>
+    <main><Login /></main>
+
   );
 }
+
+export default App;
