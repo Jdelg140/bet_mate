@@ -1,10 +1,12 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-const login = () => {
+const Login = () => {
   return (
-    <Box></Box>
+    <>
+    <Login />
+    </>
   )
 }
 
-export default login
+export default Login
