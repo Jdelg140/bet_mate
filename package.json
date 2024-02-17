@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "backend": "python -m flask run"
+    "backend": "python -m flask run",
+    "flaskInstall": "python -m pip install flask"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
