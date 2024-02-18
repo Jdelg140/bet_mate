@@ -3,6 +3,7 @@ export const useStyles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        alignItems: 'center',
     } as React.CSSProperties,
     textField: {
         width: '10%',

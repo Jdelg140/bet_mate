@@ -1,10 +1,18 @@
 import { Box, TextField, Button, FormLabel } from '@mui/material'
-import React from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { useStyles } from './styles'
 
 const Login = () => {
   const { root, textField, button } = useStyles
-  return (
+  const [username, grabUsername] = useState('')
+  const [password, grabPassword] = useState('')
+
+  useEffect(() => {
+    console.log('username', username)
+    console.log('password', password)
+  }
+  , [username,password])
+    return (
     <Box component="form" style={root} >
     <FormLabel sx={{fontSize: '24px', textAlign: 'center'}}>Login</FormLabel>
     <TextField label="Username"  style={textField}/>
