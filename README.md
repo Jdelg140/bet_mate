@@ -35,8 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
-## Using Flask and Python 
+## Using Flask and Python
 
 This article is the basic way to set up a flask and python application.
 For now, run backend script with the terminal set to bash. Need to figure out how to make it accessable to all terminals.

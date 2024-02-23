@@ -1,10 +1,11 @@
-import Login from "@/components/Login";
+import { LoginComp } from '@/components/Login/index';
 
 const App = () => {
   return (
-    <main><Login /></main>
-
+    <main>
+      <LoginComp />
+    </main>
   );
-}
+};
 
 export default App;
