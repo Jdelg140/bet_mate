@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 12, // Set to the ECMAScript version you're targeting
+    ecmaVersion: 12,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -25,9 +25,9 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'eol-last': ['error', 'always'],
-    'import/named': 'off', // Removed array brackets for consistency
-    'import/extensions': 'off', // Removed array brackets for consistency
-    'import/no-unresolved': 'off', // Removed array brackets for consistency
+    'import/named': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
     'react/jsx-no-bind': 'error',
     'import/order': [
       'error',
@@ -49,7 +49,7 @@ module.exports = {
 
   settings: {
     react: {
-      version: 'detect', // Set React version to detect automatically
+      version: 'detect',
     },
     'import/resolver': {
       node: {

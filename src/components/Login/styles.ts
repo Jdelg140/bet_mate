@@ -19,11 +19,11 @@ export const useStyles = {
     position: 'absolute',
     top: '24px',
     left: '211px',
-    fontFamily: 'Epilogue', // Heading
+    fontFamily: 'Epilogue',
     fontSize: '32px',
     fontWeight: 700,
     lineHeight: '48px',
-    color: '#171A1FFF', // neutral-900
+    color: '#171A1FFF',
   },
   textBox: {
     position: 'absolute',
@@ -62,15 +62,15 @@ export const useStyles = {
 
   textBoxInputFocus: {
     '&:focus': {
-      color: '#BDC1CAFF', // neutral-400
-      background: '#FFFFFFFF', // white
+      color: '#BDC1CAFF',
+      background: '#FFFFFFFF',
     },
   },
 
   textBoxInputDisabled: {
     '&:disabled': {
-      color: '#BDC1CAFF', // neutral-400
-      background: '#F3F4F6FF', // neutral-200
+      color: '#BDC1CAFF',
+      background: '#F3F4F6FF',
     },
   },
 };
