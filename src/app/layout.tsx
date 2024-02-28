@@ -1,10 +1,12 @@
-import { useStyles } from "./styles";
+import React from 'react';
+
+import { useStyles } from './styles';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): JSX.Element {
   const { root, max } = useStyles;
   return (
     <html lang="en">
