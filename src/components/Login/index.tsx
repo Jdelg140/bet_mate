@@ -1,39 +1,80 @@
-import { Box, TextField, Button, FormLabel } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  IconButton,
+  Input,
+  InputAdornment,
+  InputLabel,
+} from '@mui/material';
+import Link from 'next/link';
+import React from 'react';
+
 import { useStyles } from './styles';
 
-const LoginComp = () => {
-  const { root, textField, button } = useStyles;
-  const [username, grabUsername] = useState('');
-  const [password, grabPassword] = useState('');
-
-  useEffect(() => {
-    console.log('username', username);
-    console.log('password', password);
-  }, [username, password]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        axios
-          .get('/login')
-          .then((response) => grabUsername(response.data))
-          .catch((err) => console.log(err));
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+export const LoginComp = () => {
+  const { root, container, formContainer, linkBox, textStyles, button, linkText } = useStyles;
   return (
-    <Box component="form" style={root}>
-      <FormLabel sx={{ fontSize: '24px', textAlign: 'center' }}>Login</FormLabel>
-      <TextField label="Username" style={textField} />
-      <TextField label="Password" type="password" style={textField} />
-      <Button style={button}>Login</Button>
+    <Box sx={root}>
+      <Box sx={container}>
+        <Box sx={textStyles}>Login</Box>
+        <Box sx={formContainer}>
+          <FormControl variant="standard">
+            <InputLabel htmlFor="input-with-icon-adornment">Email</InputLabel>
+            <Input
+              id="input-with-icon-adornment"
+              startAdornment={
+                <InputAdornment position="start">
+                  <AccountCircle />
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <FormControl variant="standard">
+            <InputLabel htmlFor="input-with-icon-adornment">Password</InputLabel>
+            <Input
+              id="input-with-icon-adornment"
+              // type={showPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    // onClick={handleClickShowPassword}
+                    // onMouseDown={handleMouseDownPassword}
+                  >
+                    {/* {showPassword ? <VisibilityOff /> : <Visibility />} */}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+        </Box>
+        <Box sx={linkBox}>
+          <FormControlLabel
+            control={
+              <Checkbox
+                sx={{
+                  color: '#E05858FF',
+                  '&.Mui-checked': {
+                    color: '#E05858FF',
+                  },
+                }}
+                defaultChecked
+              />
+            }
+            label="Remember Me"
+          />
+          <Link style={linkText} href={''}>
+            Forgot Password?
+          </Link>
+        </Box>
+        <Button variant="contained" style={button}>
+          Login
+        </Button>
+      </Box>
     </Box>
   );
 };
-
-export default LoginComp;
