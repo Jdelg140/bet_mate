@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useStyles } from './styles';
 
-const LoginComp = () => {
+const RegisterComp = () => {
   const { root, textField, button } = useStyles;
   const [username, grabUsername] = useState('');
   const [password, grabPassword] = useState('');
@@ -36,4 +36,4 @@ const LoginComp = () => {
   );
 };
 
-export default LoginComp;
+export default RegisterComp;
