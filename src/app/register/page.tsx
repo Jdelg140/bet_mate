@@ -1,7 +1,12 @@
-import { RegisterComp } from '@/components/Register/index';
+import { NavbarComp } from '@/components/Navbar';
+import { RegisterComp } from '../../components/Register';
 
 const Register = () => {
-  return <RegisterComp />;
+  return (
+    <>
+      <NavbarComp />
+      <RegisterComp />
+    </>
+  );
 };
-
 export default Register;
