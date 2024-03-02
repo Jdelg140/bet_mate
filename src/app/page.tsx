@@ -1,9 +1,11 @@
-import { LoginComp } from '@/components/Login/index';
+import { NavbarComp } from '@/components/Navbar';
+import React from 'react';
 
 const App = () => {
   return (
     <main>
-      <LoginComp />
+      <NavbarComp />
+      <h1>Welcome to Bet Buddy mother fuckers</h1>
     </main>
   );
 };

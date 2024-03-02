@@ -11,6 +11,5 @@ export const useStyles = {
     width: '100%',
     height: 'auto',
     maxWidth: '2000px',
-    marginTop: '89px',
   },
 };
