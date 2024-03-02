@@ -1,11 +1,9 @@
-import { NavbarComp } from '@/components/Navbar';
-import React from 'react';
+import { Home } from '@/components/Home/index';
 
 const App = () => {
   return (
     <main>
-      <NavbarComp />
-      <h1>Welcome to Bet Buddy mother fuckers</h1>
+      <Home />
     </main>
   );
 };
