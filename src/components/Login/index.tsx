@@ -24,14 +24,7 @@ export const LoginComp = () => {
         <Box sx={formContainer}>
           <FormControl variant="standard">
             <InputLabel htmlFor="input-with-icon-adornment">Email</InputLabel>
-            <Input
-              id="input-with-icon-adornment"
-              startAdornment={
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              }
-            />
+            <Input id="input-with-icon-adornment" />
           </FormControl>
           <FormControl variant="standard">
             <InputLabel htmlFor="input-with-icon-adornment">Password</InputLabel>
