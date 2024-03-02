@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useStyles } from './styles';
+import { NavbarComp } from '@/components/Navbar';
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="" />
       </head>
       <body style={root}>
+        <NavbarComp />
         <div style={max}>{children}</div>
       </body>
     </html>
