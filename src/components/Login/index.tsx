@@ -1,4 +1,3 @@
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import {
   Box,
   Button,
