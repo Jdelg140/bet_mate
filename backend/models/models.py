@@ -4,9 +4,6 @@ from sqlalchemy import create_engine, ForeignKey, Column, Integer, String, CHAR
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# app = Flask(__name__)
-# basedir = os.path.abspath(os.path.dirname(__file__))
-
 Base = declarative_base()
 
 class User(Base):

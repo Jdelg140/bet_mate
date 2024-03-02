@@ -1,9 +1,9 @@
-import { LoginComp } from '@/components/Login/index';
+import { Home } from '@/components/Home/index';
 
 const App = () => {
   return (
     <main>
-      <LoginComp />
+      <Home />
     </main>
   );
 };

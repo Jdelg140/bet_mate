@@ -1,9 +1,10 @@
 import { Box, TextField, Button, FormLabel } from '@mui/material';
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+
 import { useStyles } from './styles';
 
-const RegisterComp = () => {
+export const RegisterComp = () => {
   const { root, textField, button } = useStyles;
   const [username, grabUsername] = useState('');
   const [password, grabPassword] = useState('');
@@ -35,5 +36,3 @@ const RegisterComp = () => {
     </Box>
   );
 };
-
-export default RegisterComp;

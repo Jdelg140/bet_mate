@@ -1,6 +1,6 @@
-import LoginComp from '../../components/Login';
-
-export const Login = () => {
-  return;
-  <LoginComp />;
+import { LoginComp } from '@/components/Login/index';
+const Login = () => {
+  return <LoginComp />;
 };
+
+export default Login;
