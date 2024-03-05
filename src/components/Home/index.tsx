@@ -1,6 +1,3 @@
-import React from 'react';
-import { NavbarComp } from '../Navbar';
-
 export const Home = () => {
   return (
     <>

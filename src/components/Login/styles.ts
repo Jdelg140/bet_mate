@@ -44,7 +44,6 @@ export const useStyles = {
   },
 
   textBoxStyles: {
-    /* Textbox 42 */
     fontFamily: 'Inter',
     fontSize: '14px',
     fontWeight: 400,
@@ -63,11 +62,11 @@ export const useStyles = {
   } as React.CSSProperties,
 
   linkText: {
-    fontFamily: 'Inter', // Body
+    fontFamily: 'Inter',
     fontSize: '14px',
     fontWeight: 400,
     lineHeight: '22px',
-    color: '#E05858FF', // primary-500
+    color: '#E05858FF',
     textDecoration: 'none',
   },
 };
