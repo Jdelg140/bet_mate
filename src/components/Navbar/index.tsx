@@ -1,3 +1,4 @@
+import SearchIcon from '@mui/icons-material/Search';
 import {
   Box,
   Button,
@@ -7,7 +8,7 @@ import {
   OutlinedInput,
   Typography,
 } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+
 import { useStyles } from './styles';
 
 export const NavbarComp = () => {
