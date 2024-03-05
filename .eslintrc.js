@@ -12,7 +12,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ['prettier','@typescript-eslint', 'react'],
+  plugins: ['prettier', '@typescript-eslint', 'react'],
   extends: [
     'plugin:import/recommended',
     'plugin:@typescript-eslint/recommended',
