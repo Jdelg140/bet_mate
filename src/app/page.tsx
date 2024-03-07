@@ -1,4 +1,4 @@
-import { Home } from '@/components/Home/index';
+import { Home } from '../components/Home/index';
 
 const App = () => {
   return (

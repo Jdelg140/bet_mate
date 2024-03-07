@@ -11,8 +11,8 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
     "typecheck": "tsc --noEmit",
     "ts-check": "tsc -p tsconfig.json",
-    "backend": "python -m flask run",
-    "flaskInstall": "python -m pip install flask",
+    "backend": "python3 backend/app.py",
+    "flaskInstall": "python3 -m pip install flask",
     "startPostgresql": "brew services start postgresql@16",
     "stopPostgresql": "brew services stop postgresql@16"
   },
