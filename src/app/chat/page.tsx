@@ -1,4 +1,4 @@
-import { ChatComp } from '@/components/Chat/index';
+import { ChatComp } from '../../components/Chat/index';
 
 export const Chat = () => {
   return (

@@ -1,4 +1,4 @@
-import { CreateTeamComp } from '@/components/CreateTeam';
+import { CreateTeamComp } from '../../components/CreateTeam';
 
 const CreateTeam = () => {
   return (

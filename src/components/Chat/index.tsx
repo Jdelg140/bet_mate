@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import { useStyles } from './styles';
 
-import { ChatListComp } from '@/components/common/ChatPage/chatListComp';
+import { ChatListComp } from '../common/ChatPage/chatListComp';
 
 export const ChatComp = () => {
   const { root, mainContainer, listContainer } = useStyles;
