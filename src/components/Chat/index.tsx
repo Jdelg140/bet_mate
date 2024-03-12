@@ -4,10 +4,20 @@ import { Box } from '@mui/material';
 
 import { useStyles } from './styles';
 
-import { ChatListComp } from '../common/ChatPage/chatListComp';
+import { ChatListComp } from '@/components/common/ChatPage/chatListComp/index';
 
 
 export const ChatComp = () => {
-    const { root } = useStyles;
-  return <Box sx={root}><ChatListComp/></Box>;
+  const { root, mainContainer, listContainer } = useStyles;
+  
+  return (
+    <Box sx={root}>
+      <Box sx={mainContainer}>
+        <Box></Box>
+        <Box sx={listContainer}>
+          <ChatListComp />
+        </Box>
+      </Box>
+    </Box>
+  );
 };

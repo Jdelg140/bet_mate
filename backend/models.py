@@ -16,5 +16,3 @@ class User(db.Model):
             "password": self.password,
             "team": self.team
         }
-
-
