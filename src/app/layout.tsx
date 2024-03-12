@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useStyles } from './styles';
-import { NavbarComp } from '@/components/Navbar';
+import { NavbarComp } from '../components/Navbar';
 
 export default function RootLayout({
   children,

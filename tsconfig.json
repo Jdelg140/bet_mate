@@ -22,6 +22,6 @@
       "react": ["./node_modules/@types/react"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","**/*.svg", ".next/types/**/*.ts"],
+  "include": ["frontend/next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.svg", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
