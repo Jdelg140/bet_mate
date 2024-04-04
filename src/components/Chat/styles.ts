@@ -1,3 +1,5 @@
+import { breakpoints } from "@/utils/breakpoints";
+
 export const useStyles = {
   root: {
     width: '100%',
@@ -13,5 +15,11 @@ export const useStyles = {
   listContainer: {
     width: '40%',
     display: 'flex',
+    [`@media(max-width: ${breakpoints.md}px)`]: {
+      paddingTop: '2rem',
+      flexDirection: 'column',
+      gap: '3rem',
+      height: 'auto',
+    },
   },
 };
