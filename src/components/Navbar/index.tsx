@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import { NavbarMenu } from '../common/navbarMenu';
+import { NavbarMenu } from '../common/NavBar/navbarMenu';
 
 import { useStyles } from './styles';
 
@@ -18,7 +18,9 @@ export const NavbarComp = () => {
   return (
     <Box style={root}>
       <NavbarMenu />
-      <Typography style={logo}>Bet Buddy</Typography>
+      <Typography style={logo}>
+        <h1>Bet Buddy</h1>
+      </Typography>
       <Box style={search}>
         <FormControl fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="searchBar">Search</InputLabel>
@@ -34,8 +36,12 @@ export const NavbarComp = () => {
         </FormControl>
       </Box>
       <Box sx={{ display: 'flex', gap: '20px', marginRight: '41px', alignItems: 'center' }}>
-        <Button style={register}>Register</Button>
-        <Button style={login}>Login</Button>
+        <Button style={register}>
+          <h5>Register</h5>
+        </Button>
+        <Button style={login}>
+          <h5>Login</h5>
+        </Button>
       </Box>
     </Box>
   );

@@ -1,7 +1,16 @@
+import { Poppins } from 'next/font/google';
 import React from 'react';
 
-import { useStyles } from './styles';
 import { NavbarComp } from '../components/Navbar';
+
+import { useStyles } from './styles';
+
+
+const poppins = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function RootLayout({
   children,
@@ -10,7 +19,7 @@ export default function RootLayout({
 }>): JSX.Element {
   const { root, max } = useStyles;
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <head>
         <meta name="description" content="Experience More!" />
         <meta name="viewport" content="width=375px, initial-scale=1" />
