@@ -10,6 +10,8 @@ import {
   Typography,
 } from '@mui/material';
 
+import { NavbarMenu } from '../common/NavBar/navbarMenu';
+
 import { useStyles } from './styles';
 import { ProfileComp } from '../Profile';
 import { useRouter } from 'next/navigation';
@@ -49,7 +51,6 @@ export const NavbarComp = () => {
           />
         </FormControl>
       </Box>
-
       <Box sx={{ display: 'flex', gap: '20px', marginRight: '41px', alignItems: 'center' }}>
         <ProfileComp />
         <Button style={register} onClick={handleRegister}>

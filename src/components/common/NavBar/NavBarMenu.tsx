@@ -1,19 +1,25 @@
 'use client';
 
+import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Link } from '@mui/material';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { useState } from 'react';
+import React, { useCallback } from 'react';
 
-export default function BasicMenu() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+export const NavbarMenu = () =>{
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
+
+    const handleClick = useCallback(
+      async (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+      },
+      [],
+    );
+  const handleClose = useCallback(async () => {
     setAnchorEl(null);
-  };
+  }, []);
 
   return (
     <Box>
@@ -24,7 +30,7 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Dashboard
+        <MenuIcon />
       </Button>
       <Menu
         id="basic-menu"
@@ -35,9 +41,31 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/" rel="noreferrer">
+            Home
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/chat" rel="noreferrer">
+            Chat Room
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/stats" rel="noreferrer">
+            Player Stats
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/profile" rel="noreferrer">
+            Profile
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/logout" rel="noreferrer">
+            Logout
+          </Link>
+        </MenuItem>
       </Menu>
     </Box>
   );

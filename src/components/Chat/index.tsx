@@ -6,8 +6,8 @@ import { useStyles } from './styles';
 
 import { ChatListComp } from '@/components/common/ChatPage/chatListComp/index';
 
-
 export const ChatComp = () => {
+
   const { root, mainContainer, listContainer } = useStyles;
   
   return (

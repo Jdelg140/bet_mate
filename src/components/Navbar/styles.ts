@@ -1,4 +1,13 @@
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const useStyles = {
+  
   root: {
     display: 'flex',
     flexDirection: 'row',
@@ -11,28 +20,27 @@ export const useStyles = {
     height: '91px',
   } as React.CSSProperties,
   logo: {
+    fontFamily: `${poppins}, poppins`,
     marginLeft: '41px',
-    fontSize: '36px',
-    fontFamily: 'Epilogue',
     color: 'red',
   } as React.CSSProperties,
   search: { display: 'flex', alignItems: 'center' } as React.CSSProperties,
   register: {
+    fontFamily: `${poppins}, poppins`,
     width: '93px',
     height: '52px',
     color: 'white',
     fontSize: '14px',
-    fontFamily: 'Inter',
     background: 'black',
     opacity: 1,
     borderRadius: '12px',
   } as React.CSSProperties,
   login: {
+    fontFamily: `${poppins}, poppins`,
     width: '77px',
     height: '52px',
     color: 'white',
     fontSize: '14px',
-    fontFamily: 'Inter',
     background: 'red',
     opacity: 1,
     borderRadius: '12px',
