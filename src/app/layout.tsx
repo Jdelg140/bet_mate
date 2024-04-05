@@ -7,7 +7,7 @@ import { useStyles } from './styles';
 
 
 const poppins = Poppins({
-  weight: '700',
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
@@ -26,6 +26,7 @@ export default function RootLayout({
         <title>Bet Mate</title>
         <link rel="icon" type="image/x-icon" sizes="16x16" href="" />
         <link rel="apple-touch-icon" sizes="180x180" href="" />
+        
       </head>
       <body style={root}>
         <NavbarComp />

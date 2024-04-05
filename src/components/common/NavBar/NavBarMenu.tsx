@@ -7,7 +7,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import React, { useCallback } from 'react';
 
+import { useStyles } from './styles';
+
 export const NavbarMenu = () =>{
+  const { burger, tabs} = useStyles;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -30,7 +33,7 @@ export const NavbarMenu = () =>{
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon style={burger} />
       </Button>
       <Menu
         id="basic-menu"
@@ -42,27 +45,27 @@ export const NavbarMenu = () =>{
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link href="/" rel="noreferrer">
+          <Link style={tabs} href="/" rel="noreferrer">
             Home
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/chat" rel="noreferrer">
+          <Link style={tabs} href="/chat" rel="noreferrer">
             Chat Room
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/stats" rel="noreferrer">
+          <Link style={tabs} href="/stats" rel="noreferrer">
             Player Stats
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/profile" rel="noreferrer">
+          <Link style={tabs} href="/profile" rel="noreferrer">
             Profile
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/logout" rel="noreferrer">
+          <Link style={tabs} href="/logout" rel="noreferrer">
             Logout
           </Link>
         </MenuItem>

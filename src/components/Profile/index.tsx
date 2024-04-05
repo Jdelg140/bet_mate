@@ -1,8 +1,10 @@
-import * as React from 'react';
+/* eslint-disable react/jsx-no-bind */
 import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
+import * as React from 'react';
+
 import { useStyles } from './styles';
 
 export const ProfileComp = () => {
@@ -12,7 +14,7 @@ export const ProfileComp = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <Box>
       <Button onClick={handleOpen}>Your Profile</Button>
       <Modal
         keepMounted
@@ -43,6 +45,6 @@ export const ProfileComp = () => {
           </Box>
         </Box>
       </Modal>
-    </div>
+    </Box>
   );
 };

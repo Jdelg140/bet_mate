@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import SearchIcon from '@mui/icons-material/Search';
 import {
@@ -7,17 +9,16 @@ import {
   InputAdornment,
   InputLabel,
   OutlinedInput,
-  Typography,
 } from '@mui/material';
-
-import { NavbarMenu } from '../common/NavBar/navbarMenu';
-
-import { useStyles } from './styles';
-import { ProfileComp } from '../Profile';
 import { useRouter } from 'next/navigation';
 
+import { ProfileComp } from '../Profile';
+import { NavbarMenu } from '../common/NavBar/NavBarMenu';
+
+import { useStyles } from './styles';
+
 export const NavbarComp = () => {
-  const { root, logo, login, register, search } = useStyles;
+  const { root, logo, login, register,container, search } = useStyles;
   const router = useRouter();
   const handleHome = (e: any) => {
     e.preventDefault();
@@ -34,9 +35,14 @@ export const NavbarComp = () => {
   };
   return (
     <Box style={root}>
-      <Button style={logo} onClick={handleHome}>
-        Bet Buddy
-      </Button>
+      <Box sx={container}>
+        <NavbarMenu />
+        <Box>
+        <Button style={logo} onClick={handleHome}>
+          Bet Buddy
+        </Button>
+        </Box>
+      </Box>
       <Box style={search}>
         <FormControl fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="searchBar">Search</InputLabel>
