@@ -1,6 +1,7 @@
 from flask import request, jsonify
 from config import app, db
 from models import User
+import jwt
 
 @app.route("/")
 def home():
@@ -9,7 +10,13 @@ def home():
 
 @app.route("/login")
 def login():
-    return "Login"
+    payload_data = {
+        "sub": "1998",
+        "name": "John Doe",
+        "nickname": "johndoe",
+    }
+    token = jwt.encode(payload_data, "jacoblikesbluewaffles", algorithm="HS256")
+    return token
 
 
 @app.route("/register", methods=["POST"])

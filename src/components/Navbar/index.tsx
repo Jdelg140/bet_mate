@@ -1,3 +1,4 @@
+'use client';
 import SearchIcon from '@mui/icons-material/Search';
 import {
   Box,
@@ -10,12 +11,30 @@ import {
 } from '@mui/material';
 
 import { useStyles } from './styles';
+import { ProfileComp } from '../Profile';
+import { useRouter } from 'next/navigation';
 
 export const NavbarComp = () => {
   const { root, logo, login, register, search } = useStyles;
+  const router = useRouter();
+  const handleHome = (e: any) => {
+    e.preventDefault();
+    router.push('/');
+  };
+  const handleRegister = (e: any) => {
+    e.preventDefault();
+    router.push('/register');
+  };
+
+  const handleLogin = (e: any) => {
+    e.preventDefault();
+    router.push('/login');
+  };
   return (
     <Box style={root}>
-      <Typography style={logo}>Bet Buddy</Typography>
+      <Button style={logo} onClick={handleHome}>
+        Bet Buddy
+      </Button>
       <Box style={search}>
         <FormControl fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="searchBar">Search</InputLabel>
@@ -32,8 +51,13 @@ export const NavbarComp = () => {
       </Box>
 
       <Box sx={{ display: 'flex', gap: '20px', marginRight: '41px', alignItems: 'center' }}>
-        <Button style={register}>Register</Button>
-        <Button style={login}>Login</Button>
+        <ProfileComp />
+        <Button style={register} onClick={handleRegister}>
+          Register
+        </Button>
+        <Button style={login} onClick={handleLogin}>
+          Login
+        </Button>
       </Box>
     </Box>
   );

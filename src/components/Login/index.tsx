@@ -10,12 +10,16 @@ import {
   InputLabel,
 } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useStyles } from './styles';
 
 export const LoginComp = () => {
   const { root, container, formContainer, linkBox, textStyles, button, linkText } = useStyles;
+  const [login, setLogin] = useState({
+    email: '',
+    password: '',
+  });
   return (
     <Box sx={root}>
       <Box sx={container}>
